@@ -5,18 +5,21 @@ import java.util.Scanner;
 
 public class LectorNumeros {
     public static void main(String[] args) {
-        Scanner scannerInput = new Scanner( System.in );
-
 //        se podría meter en un bucle pero igual fallan las pruebas automatizadas, lo handleo y ya
-
         try{
-            System.out.print( "Introduce el integer a leer: " );
-            int numero = scannerInput.nextInt();
-
+            int numero = leerNumero();
             printNumeros(numero);
         } catch (InputMismatchException e){
             System.out.print( "Tipo de dato incorrecto, por favor introduce un número válido." );
         }
+    }
+
+//    usar instrucción leerNumero, quizas las pruebas lo sustituyen por un mock en vez de introducir input
+    public static int leerNumero(){
+        Scanner scannerInput = new Scanner( System.in );
+
+        System.out.print( "Introduce el integer a leer: " );
+        return scannerInput.nextInt();
     }
 
     public static void printNumeros(int numero){
