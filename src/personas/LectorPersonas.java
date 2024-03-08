@@ -15,12 +15,11 @@ public class LectorPersonas {
     }
 
     public static void main(String[] args) {
-//        se podría meter en un bucle pero igual fallan las pruebas automatizadas, lo handleo y ya
         try{
             Persona [] arrayPersonas = leerPersonas();
             printPersonas(arrayPersonas);
-        } catch (InputMismatchException e){
-            System.out.print( "Tipo de dato incorrecto, por favor introduce un número válido." );
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
 
