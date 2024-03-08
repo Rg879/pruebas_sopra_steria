@@ -3,16 +3,6 @@ package personas;
 import java.util.*;
 
 public class LectorPersonas {
-    class PersonaOrdenada extends Persona implements Comparable{
-        public PersonaOrdenada(int edad, Sexo sexo) {
-            super(edad, sexo);
-        }
-
-        @Override
-        public int compareTo(Object o) {
-            return 0;
-        }
-    }
 
     public static void main(String[] args) {
         try{
