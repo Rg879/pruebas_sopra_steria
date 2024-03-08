@@ -13,7 +13,6 @@ public class LectorPersonas {
         }
     }
 
-//    usar instrucción leerNumero, quizas las pruebas lo sustituyen por un mock en vez de introducir input
     public static Persona[] leerPersonas(){
 //        poblamos el array de prueba
         Persona[] arrayPersonas = new Persona[50];
@@ -67,7 +66,7 @@ public class LectorPersonas {
         Persona[] ordenSexo1 = Arrays.copyOfRange(ordenEdad, indexEdad, arrayPersonas.length);
         Arrays.sort(ordenSexo1, (o1, o2) -> Sexo.getValor(o1.getSexo()) - Sexo.getValor(o2.getSexo()));
 
-//        busqueda binaria, masculino
+//        busqueda binaria, masculino mayor de edad
         int indexSexo1=-1;
         inicio = 0;
         fin = ordenSexo1.length -1;
@@ -92,7 +91,7 @@ public class LectorPersonas {
         Persona[] ordenSexo2 = Arrays.copyOfRange(ordenEdad, 0, indexEdad);
         Arrays.sort(ordenSexo2, (o1, o2) -> Sexo.getValor(o2.getSexo()) - Sexo.getValor(o1.getSexo()));
 
-//        busqueda binaria, masculino
+//        busqueda binaria, femenino menor de edad
         int indexSexo2=-1;
         inicio = 0;
         fin = ordenSexo2.length -1;
