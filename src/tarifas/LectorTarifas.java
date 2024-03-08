@@ -24,7 +24,7 @@ public class LectorTarifas {
 
     public static void printSalario(double horasTrabajadas, double tarifa){
         double tarifaOrdinaria = Math.min(40, horasTrabajadas) * tarifa;
-        double horasExtra = horasTrabajadas > 40? (horasTrabajadas -40) * tarifa : 0;
+        double horasExtra = horasTrabajadas > 40? (horasTrabajadas -40) * (tarifa * 1.5) : 0;
 
         System.out.println("El saldo del empleado es de: " + String.format("%.2f", tarifaOrdinaria + horasExtra));
     }
