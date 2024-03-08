@@ -11,7 +11,7 @@ public class LectorTarifas {
             double tarifa = leerNumero("Introduce el precio por hora: ");
             printSalario(horasTrabajadas, tarifa);
         } catch (InputMismatchException e){
-            System.out.print( "Tipo de dato incorrecto, por favor introduce un número válido." );
+            System.out.print( "Tipo de dato incorrecto, por favor introduce un número válido (los decimales han de ser comas)." );
         }
     }
 
